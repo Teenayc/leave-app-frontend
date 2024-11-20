@@ -1,0 +1,986 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');*/
+
+body,html {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+*{
+    box-sizing: border-box;
+}
+html, body, #root, #defaultLayout, #guestLayout {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #212121;
+    background-color: #f6f6f6;
+}
+
+.btun,
+.btun-add,
+.btun-edit,
+.btun-delete {
+    font-family: "Roboto", sans-serif;
+    outline-style: none;
+    background: rgba(16, 0, 106, 0.9);
+    border: 0;
+    text-decoration: none;
+    padding: 10px;
+    color: #FFFFFF;
+    font-size: 16px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+.btn-delete {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  outline-style: none;
+  background: #FF0000;
+  text-decoration: none;
+  padding: 10px;
+  color: #FFFFFF;
+  font-size: 16px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+
+  border: 1px solid transparent;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.btun-register-exam{
+  font-family: "Roboto", sans-serif;
+  outline-style: none;
+  background: #606060;
+  border: 1px solid transparent;
+  text-decoration: none;
+  padding: 10px;
+  color: #FFFFFF;
+  width: 100% !important;
+  font-size: 16px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.btun-generate-exam{
+  font-family: "Roboto", sans-serif;
+  outline-style: none;
+  background: #0012b2;
+  border: 1px solid transparent;
+  text-decoration: none;
+  padding: 10px;
+  color: #FFFFFF;
+  width: 100% !important;
+  font-size: 16px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.MuiChartsAxis-tickLabel .MuiChartsAxis-tickLabel tspan{
+  display: none !important;
+}
+
+.btun-generate-exam:hover{
+  background: #fff;
+  border: 1px solid #0012b2;
+  text-decoration: none;
+  padding: 10px;
+  color: #0012b2;
+}
+
+.btun-register-exam:hover{
+  background: #0012b2;
+  border: 1px solid #0012b2;
+  text-decoration: none;
+  padding: 10px;
+  color: #FFFFFF;
+}
+
+.login-cover{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+
+.resend-email-verification-section{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+
+.email-verification-section{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+
+.certWrapper{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* padding: 20px; */
+}
+
+.certDetails{
+
+  width: 1100px !important;
+  height: 550px;
+  /* margin: 1em 3em 1em 3em; */
+    /* background-color: #0012b2; */
+  margin: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('./assets/annualConventionCert.png');
+
+}
+
+.certName{
+
+  margin:15em 0 0 25em;
+
+}
+
+.certDirSignature{
+  
+  margin:35em 0 0 15em;
+
+}
+
+
+.certPresSignature{
+  
+  margin:65em 0 0 20em;
+
+}
+
+
+.css-19kzrtu {
+  padding: 0 !important;
+}
+
+.btun-block {
+    width: 100%;
+    border: 1px solid transparent;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding: 10px;
+  background-color: rgba(16, 0, 106, 0.9);
+  color: white;
+}
+
+.btun-add,
+.btun-edit,
+.btun-delete{
+    padding: 0.5rem 0.75rem;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.btun-add {
+    background-color: rgba(16, 0, 106, 0.9);
+}
+.btun-delete {
+    background-color: #b72424;
+}
+
+.btun-logout{
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    background-color: #ff0000;
+    color: #fff !important;
+    transition: all 0.3s;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.btun-user {
+  text-decoration: none;
+  padding: 0.2rem 1.5rem;
+  color: #212121;
+  transition: all 0.3s;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btun-settings, .btun-username, .btun-user {
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  color: #212121;
+  transition: all 0.3s;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btun-logout:hover{
+  border: 1px solid #ff0000;
+  color:#ff0000 !important;
+  background-color: rgb(255, 255, 255);
+}
+
+.btun-logout:hover, .btun-settings:hover, .btun-username:hover, .btun-user:hover{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btun:hover,
+.btun:active,
+.btun:focus {
+    background: #fff;
+    border: 1px solid rgba(16, 0, 106, 0.9);
+    color: rgba(16, 0, 106, 0.9);
+    transition: 1s;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+    background: #fff;
+    border: 1px solid #FF0000;
+    color: #FF0000;
+    transition: 1s;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.forgot-password-div{
+  display: flex;
+  justify-content: center;
+}
+
+.forgot-password-form{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table > thead > tr > th {
+    text-align: left;
+    padding: 0.5rem 0.5rem;
+    background-color: #efefef;
+}
+
+table > tbody > tr > td {
+    padding: 0.5rem 0.5rem;
+    border-bottom: 1px solid #efefef;
+    white-space: nowrap;
+}
+
+.card {
+    background-color: #FFF;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+.error-alert {
+    padding: .5rem;
+    background-color: #ff0000;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.success-alert{
+  display: flex;
+  padding: .5rem;
+  background-color: #117411;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.notification {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 100;
+    padding: 1rem 1.5rem;
+    background-color: rgba(16, 0, 106, 0.9);
+    color: white;
+    border-radius: 0.5rem;
+}
+
+/* Login/Signup forms*/
+
+.login-logo{
+    display: flex;
+    justify-content: center;
+}
+
+.login-logo img{
+  height: 130px;
+  width: 130px;
+}
+
+.login-signup-form{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-signin-form {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-signin-form .form {
+    width: 360px;
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    padding: 5px 20px 20px 20px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    opacity: 0.93;
+}
+
+.login-signup-form .form {
+  width: 560px;
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  padding: 5px 20px 20px 20px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0.93;
+}
+
+.login-signup-form .form .div-password-input, .login-signin-form .form .div-password-input{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid rgba(16, 0, 106, 0.9);;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  border-radius: 2px;
+}
+
+.login-signup-form .form input, .login-signin-form .form input{
+  border: 2px solid transparent;
+  padding: 10px;
+  width: 100%;
+}
+
+.login-signup-form .form input:focus, .login-signin-form .form input:focus {
+  outline: none;
+}
+
+.login-signup-form .form .password-visible-icon, .login-signin-form .form .password-visible-icon{
+  margin-right: 5px;
+}
+
+.login-signup-form .form .div-membership-input, .login-signin-form .form .div-membership-input{
+  box-sizing: border-box;
+}
+
+
+.login-signup-form .form .div-membership-input input, .login-signin-form .form .div-membership-input input{
+  padding: 10px;
+  border: 2px solid rgba(16, 0, 106, 0.9);
+  margin: 0 0 15px 0;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.login-signup-form .form .div-membership-input input:focus, .login-signin-form .form .div-membership-input input:focus {
+  outline: none;
+}
+
+.login-signup-form .title, .login-signin-form .title {
+    font-size: 20px;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: rgba(16, 0, 106, 0.9);
+}
+
+.login-signup-form .form .forgot-password, .login-signin-form .form .forgot-password{
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.login-signup-form .form .forgot-password a, .login-signin-form .form .forgot-password a{
+  color: red !important;
+}
+
+.login-signup-form .form .version-message, .login-signin-form .form .version-message{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.login-signup-form .form .version-message a, .login-signin-form .form .version-message a{
+  color: black !important;
+  display: flex;
+  align-items: center;
+}
+
+
+.login-signup-form .form .version-message img, .login-signin-form .form .version-message img{
+  height: 60px;
+  width: 60px;
+}
+
+.login-signup-form .form .message, .login-signin-form .form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 16px;
+    text-align: start;
+}
+
+.login-signup-form .form .message a, .login-signin-form .form .message a {
+    color: rgba(16, 0, 106, 0.9);
+    text-decoration: none;
+}
+
+#defaultLayout {
+  display: flex;
+  /* justify-content: start;
+  align-items: center; */
+  height: 100% !important;
+}
+
+main{
+  /* height: 600px !important; */
+  height: calc(100vh - 130px) !important;
+  width: 100%;
+  overflow-y: scroll;
+  padding: 10px !important;
+}
+
+.termsofuse{
+  height: calc(80vh - 50px) !important;
+  width: 60%;
+  overflow-y: scroll;
+  padding: 10px !important;
+}
+
+/* .main-container {
+  max-height: 100%;
+  overflow-y: scroll;
+} */
+
+#defaultLayout aside {
+
+    /* width: 240px; */
+    background-color: rgba(16, 0, 106, 0.9);
+    /* padding: 1rem 0 1rem 1rem; */
+
+    /* width: 17% !important; */
+    width:250px;
+    height: calc(100vh - 5px) !important;
+    padding: 1rem 0 1rem 1rem;
+    overflow-y: scroll;
+    /* display: flex;
+    justify-content: center; */
+    /* position: fixed;  */
+    top:0;
+    left:0% !important;
+    transition: 850ms;
+
+    /* overflow: hidden;
+    overflow-y: scroll; */
+
+    padding-bottom: 70px;
+}
+
+#defaultLayout aside .active{
+  left:0;
+  transition: 350ms;
+  background-color: rgb(255, 255, 255);
+  color:black;
+}
+
+#defaultLayout aside .img-icon{
+  height: 25px;
+  width: 25px;
+  color: white !important;
+}
+
+#defaultLayout aside .aside-logo-div{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+
+}
+
+#defaultLayout aside .aside-logo-div img{
+  height: 150px;
+  width: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.profile img{
+  height:250px;
+  width: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn-edit-image{
+  color:rgb(111, 111, 243) !important;
+}
+
+.btn-edit-image:hover{
+  color:blue !important;
+}
+
+.btn-update-changes{
+  font-family: "Roboto", sans-serif;
+  outline-style: none;
+  background: rgba(16, 0, 106, 0.9);
+  width: 100%;
+  border: 0;
+  text-decoration: none;
+  padding: 10px;
+  color: #FFFFFF;
+  font-size: 16px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+#defaultLayout aside > a {
+    display: block; 
+    padding: 0.75rem 1rem;
+    border-radius: 6px 0px 0px 6px; 
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#defaultLayout aside > a:hover {
+    background-color: rgb(255, 255, 255);
+    color:rgba(16, 0, 106, 0.9);
+}
+
+#defaultLayout .content {
+    flex: 1;
+    width: 83% !important;
+}
+
+#defaultLayout .content .title-div{
+  display: flex;
+  align-items: center;
+}
+
+#defaultLayout .content .title-div .ipmz-logo-div img{
+  height: 60px;
+  width: 70px;
+}
+
+#defaultLayout .content .title-div .title-name {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#defaultLayout header {
+    height: 60px;
+    padding: 2rem 3rem;
+    background-color: white;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#defaultLayout main {
+    padding: 2rem;
+}
+
+.animated {
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* start of media query screen 400px can also written as: @media (width <= 1010px)*/
+@media (width <= 1010px) {
+
+  #defaultLayout aside {
+    background-color: rgba(16, 0, 106, 0.9);
+    width:250px;
+    height: calc(100vh - 5px) !important;
+    padding: 1rem 0 1rem 1rem;
+    overflow-y: scroll;
+    /* display: flex;
+    justify-content: center; */
+    position: fixed;
+    top:65px;
+    left:0% !important;
+    // transition: 850ms;
+    transition: transform 0.3s ease;
+    z-index: 5; /* Ensure aside is on top */
+    transform: translateX(0); /* Sidebar is visible by default */
+    padding-bottom: 120px;
+
+    &.hidden {
+      transform: translateX(-100%); /* Hide the sidebar */
+    }
+
+  }
+
+  #defaultLayout header {
+    height: 60px;
+    padding: 2rem 3rem;
+    background-color: white;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+  #defaultLayout .content {
+    width: 100% !important;
+    position: relative;
+
+    &.collapsed {
+      margin-left: 0;
+      header {
+        width: 100%;
+      }
+    }
+
+  }
+
+  .toggle {
+    position: fixed;
+    left: 10px;
+    top: auto;
+    cursor: pointer;
+    background: transparent;;
+    border: none;
+  }
+
+  #defaultLayout aside .active{
+      background-color: rgb(255, 255, 255);
+      color:black;
+    }
+
+    #defaultLayout aside .img-icon{
+      height: 25px;
+      width: 25px;
+      color: white !important;
+    }
+
+    #defaultLayout aside .aside-logo-div{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+
+    }
+
+    #defaultLayout aside .aside-logo-div img{
+      height: 150px;
+      width: 150px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    } 
+
+}
+/* end of media query screen 1010px */
+
+@media (width <= 750px) {
+
+  .login-cover{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color:#fff !important;
+    background-image: none !important;
+  }
+  
+  .resend-email-verification-section{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color:#fff !important;
+    background-image: none !important;
+  }
+  
+  .email-verification-section{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color:#fff !important;
+    background-image: none !important;
+  }
+
+  #defaultLayout aside {
+    background-color: rgba(16, 0, 106, 0.9);
+    width:250px;
+    height: calc(100vh - 5px) !important;
+    padding: 1rem 0 1rem 1rem;
+    overflow-y: scroll;
+    /* display: flex;
+    justify-content: center; */
+    position: fixed;
+    top:65px;
+    left:0% !important;
+    // transition: 850ms;
+    transition: transform 0.3s ease;
+    z-index: 5; /* Ensure aside is on top */
+    transform: translateX(0); /* Sidebar is visible by default */
+    padding-bottom: 120px;
+
+    &.hidden {
+      transform: translateX(-100%); /* Hide the sidebar */
+    }
+
+  }
+
+  #defaultLayout header {
+    height: 60px;
+    padding: 2rem 3rem;
+    background-color: white;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+  #defaultLayout .content {
+    width: 100% !important;
+    position: relative;
+
+    &.collapsed {
+      margin-left: 0;
+      header {
+        width: 100%;
+      }
+    }
+
+  }
+
+  .toggle {
+    position: fixed;
+    left: 10px;
+    top: auto;
+    cursor: pointer;
+    background: transparent;;
+    border: none;
+  }
+
+
+  #defaultLayout aside .active{
+      background-color: rgb(255, 255, 255);
+      color:black;
+  }
+
+    #defaultLayout aside .img-icon{
+      height: 25px;
+      width: 25px;
+      color: white !important;
+    }
+
+    #defaultLayout aside .aside-logo-div{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+
+    }
+
+    #defaultLayout aside .aside-logo-div img{
+      height: 150px;
+      width: 150px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    } 
+
+    .hidSettings{
+      display: none;
+    }
+
+}
+
+@media (width <= 574px) {
+
+  .login-cover{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color:#fff !important;
+    background-image: none !important;
+  }
+  
+  .resend-email-verification-section{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color:#fff;
+    background-image: none !important;
+  }
+  
+  .email-verification-section{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color:#fff;
+    background-image: none !important;
+  }
+
+  #defaultLayout aside {
+    background-color: rgba(16, 0, 106, 0.9);
+    width:250px;
+    height: calc(100vh - 5px) !important;
+    padding: 1rem 0 1rem 1rem;
+    overflow-y: scroll;
+    /* display: flex;
+    justify-content: center; */
+    position: fixed;
+    top:65px;
+    left:0% !important;
+    // transition: 850ms;
+    transition: transform 0.3s ease;
+    z-index: 5; /* Ensure aside is on top */
+    transform: translateX(0); /* Sidebar is visible by default */
+    padding-bottom: 120px;
+
+    &.hidden {
+      transform: translateX(-100%); /* Hide the sidebar */
+    }
+
+  }
+
+  #defaultLayout header {
+    height: 60px;
+    padding: 2rem 3rem;
+    background-color: white;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+  #defaultLayout .content {
+    width: 100% !important;
+    position: relative;
+
+    &.collapsed {
+      margin-left: 0;
+      header {
+        width: 100%;
+      }
+    }
+
+  }
+
+  .toggle {
+    position: fixed;
+    left: 10px;
+    top: auto;
+    cursor: pointer;
+    background: transparent;;
+    border: none;
+  }
+
+
+  #defaultLayout aside .active{
+      background-color: rgb(255, 255, 255);
+      color:black;
+    }
+
+    #defaultLayout aside .img-icon{
+      height: 25px;
+      width: 25px;
+      color: white !important;
+    }
+
+    #defaultLayout aside .aside-logo-div{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+
+    }
+
+    #defaultLayout aside .aside-logo-div img{
+      height: 150px;
+      width: 150px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    } 
+
+    .hidUsername{
+      display: none;
+    }
+
+}
